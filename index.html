@@ -1,0 +1,148 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+
+		<title>she is king</title>
+
+		<!-- styles specific to demo site -->
+		<link type="text/css" href="style/demo.css" rel="stylesheet" media="all" />
+		<!-- styles needed by jScrollPane - include in your own sites -->
+		<link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+		<style type="text/css" id="page-css">
+			/* Styles specific to this particular page */
+			.scroll-pane
+			{
+				width: 100%;
+				height: 200px;
+				overflow: auto;
+			}
+			.horizontal-only
+			{
+				height: auto;
+				max-height: 1200px;
+			}
+		</style>
+
+		<!-- latest jQuery direct from google's CDN -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<!-- the mousewheel plugin -->
+		<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="script/jquery.jscrollpane.js"></script>
+		<!-- scripts specific to this demo site -->
+		<script type="text/javascript" src="script/demo.js"></script>
+
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				//$('.scroll-pane').jScrollPane();
+				$('.scroll-pane').each(
+						function()
+						{
+							$(this).jScrollPane(
+								{
+									showArrows: $(this).is('.arrow')
+								}
+							);
+							var api = $(this).data('jsp');
+							var throttleTimeout;
+							$(window).bind(
+								'resize',
+								function()
+								{
+									if ($.browser.msie) {
+										// IE fires multiple resize events while you are dragging the browser window which
+										// causes it to crash if you try to update the scrollpane on every one. So we need
+										// to throttle it to fire a maximum of once every 50 milliseconds...
+										if (!throttleTimeout) {
+											throttleTimeout = setTimeout(
+												function()
+												{
+													api.reinitialise();
+													throttleTimeout = null;
+												},
+												50
+											);
+										}
+									} else {
+										api.reinitialise();
+									}
+								}
+							);
+						}
+					)
+				
+			});
+		</script>
+	</head>
+	<body>
+	<div id="header">
+	</div>
+	
+	<div id="content">
+		<div id="right_col">
+			<img src="images/sheisking.png">
+			<ul>
+			<li><strong>TL;DR</strong></li>
+			<li><a href="http://sheisking.tumblr.com/" target="_blank">TUMBLR</a></li>
+			<li><a href="https://saidtheking.com/" target="_blank">COMPANY</a></li>
+			<li><a href="http://twitter.com/sheis140" target="_blank">TINY STORIES</a></li>
+			<li><a href="http://twitter.com/she_is_king" target="_blank">TWITTER</a></li>
+	 		<li><a href="http://wordpiledriver.posterous.com/" target="_blank">POSTEROUS</a></li>
+			<li><a href="http://be.net/sheisking" target="_blank">WORK</a></li>
+			<li><a href="http://ca.linkedin.com/in/sheisking" target="_blank">LINKED IN</a></li>
+			<li><a href="http://www.daytum.com/sheisking" target="_blank">DATA</a></li>
+			<li><a href="http://www.goodreads.com/she_is_king" target="_blank">BOOKS</a></li>
+			<li><a href="https://foursquare.com/user/1242633" target="_blank">4SQUARE</a></li>
+			</ul>
+		</div>
+			<div id="container">
+
+				<div class="scroll-pane horizontal-only">
+
+					<div class="item-list">
+						<div id="tumblr">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://sheisking.tumblr.com/" target="_blank">tumblr</a></span> or,<br/>The urban mess blooms less regularly</h2><p>He walked through cities from bordr to bordr to bordr laying sprinklrs down the centr of sidewalks. Streams of watr sprayed out from each unit making biggr and smallr alternating arcs, pattring on New Yorkrs then taxis, New Yorkrs then taxis. Somewhere around east 23rd and 3rd a crowd rallied, closing in on the wandrr. But he wasn't consrned; aftr all, he was not only a farmr, but a professional <strong><a href="http://sheisking.tumblr.com/" target="_blank">tumblr</a></strong> too.</p>
+						</div>
+						<div id="company">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="https://saidtheking.com/" target="_blank">company</a></span> or,<br/>Camping on Mars? Pack a<br/>nice yeti</h2><p>She strained to hear through the winds of the dust storm outside. A massive form could be seen sitting just to the left of the tent door, but it wasn't making any noise. The girl had been rushed while packing for this trip, and in her haste, had grabbed the wrong yeti for <strong><a href="https://saidtheking.com/" target="_blank">company</a></strong>. The one she meant to bring had long, red fur like the planet outside and loved trail mix even more than other yetis, which was a considerable amount. And it laughed at all her jokes. But not this one. This one had white fur that tangled easily. And it preferred long walks instead of the short jaunts the red one liked. Taking a handful of mix - the kind with the smarties, even - she sighed and unzipped the door. It was a long weekend and she was damned if they weren't going to make the best of it.</p>
+						</div>
+						<div id="tiny">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://twitter.com/sheis140" target="_blank">tiny stories</a></span> or,<br/>Twenty inches nearer, your stubby toes orbit Ruth's itchy eye sockets</h2><p>The building was composed of many <strong><a href="http://twitter.com/sheis140" target="_blank">tiny stories</a></strong>; each floor was &frac12; the height of that of a standard apartment building. If you weren't mindful and stretched too far, you could easily end up in your neighbour's front hallway. The living situation wasn't for everyone, but then again, there was never any dust on the floors and the rent wasn't very high.</p>
+						</div>
+						<div id="twitter">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://twitter.com/she_is_king" target="_blank">twitter</a></span> or,<br/>The way it tastes tells everything, really</h2><p>The man sat across from the woman with the red hair. She was in a <strong><a href="http://twitter.com/she_is_king" target="_blank">twitter</a></strong>, praising him for his efforts. He had made dinner tonight: rosemary meatloaf with a sugar crust - her specialty. He wanted to do something for her and to enjoy it. But every moment spent squishing meat through his fingers was a moment not spent reading. Or looking out the window. When she made the meatloaf, she baked it in a heart-shaped tin. And made 30 loaves. To give to the orphans. Every Sunday. And most Mondays. He served her from the regular, rectangular tin. The only thing she loved more than mankind was this man. He loved solitude. The woman smiled. He frowned into his napkin, then tried the sugarcoated loaf. It was bitter.</p>
+						</div>
+						<div id="posterous">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://wordpiledriver.posterous.com/" target="_blank">posterous</a></span> or,<br/>Put on screensavers; the effulgence really oughtta uncover shadows</h2><p>Preinternet, laptops hung from wall sconces to warm the room with their glow. Back then, assigning a single colour to a wall was pre<strong><a href="http://wordpiledriver.posterous.com/" target="_blank">posterous</a></strong>; screensavers were the superior form of paint, easily switched up according to mood, brightness, and battery power. </p>
+						</div>
+						<div id="work">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://be.net/sheisking" target="_blank">work</a></span> or,<br/>Wrong or right kite</h2><p>He's never spoken. Instead he carries 2 kites: one with 'wrong' printed on it, the other,'right'. Before, he'd converse by letting go of a kite. Non-windy days were more <strong><a href="http://be.net/sheisking" target="_blank">work</a></strong> since he had run for a bit with his answer flapping behind him. On those days the conversations were quite short on account of him running away all the time. Now, in old age, when the wind is still it's hard to know what's he's thinking. </p>
+						</div>
+						<div id="linkedin">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://ca.linkedin.com/in/sheisking" target="_blank">linked in</a></span> or,<br/>Left in night knowing every detail, it needles</h2><p>The place was thriving before the mother-in-law plant got there. Now there was more brown. The mother-in-law's tongue sat on a small corner table where it could oversee much of the apartment. At night, plants would walk back and forth to be <strong><a href="http://ca.linkedin.com/in/sheisking" target="_blank">linked in</a></strong> to each other's roots. But the tongue was always reminding the monstera about its posture, and harping on how a healthy, self-respecting spider plant should have more growth. It fussed with the prayer plant, and basically told the jade how to photosynthesize. Over time the plants travelled less and instead started a dust collection. Sometimes the tongue would wilt a little just to see if anyone noticed. They didn't. And they all called her "snake plant".</p>
+						</div>
+						<div id="data">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://www.daytum.com/sheisking " target="_blank">data</a></span> or,<br/>Don't attack the airborne</h2><p>Mid-jump was the only safe place. Once a track member cleared the hurdles, they were fair game for the football team. Harsh? Maybe. But there's no disputing the <strong><a href="http://www.daytum.com/sheisking" target="_blank">data</a></strong>: that year the track team set 2 new high jump records and raced the fastest hurdles in 4 provinces. </p>
+						</div>
+						<div id="books">
+							<h2><span style="font-size:30px; font-weight:bold;"><a href="http://www.goodreads.com/she_is_king" target="_blank">books</a></span> or,<br/>Bereft of other keen surfaces</h2><p>The couple stacked everything they owned on top of everything else they owned, and then stacked the stacks on top of <strong><a href="http://www.goodreads.com/she_is_king" target="_blank">books</a></strong>. They agreed that life inside the home must be built on a sound foundation of literacy.
+	</p>
+						</div>
+						<div id="foursquare">
+								<h2><span style="font-size:30px; font-weight:bold;"><a href="https://foursquare.com/user/1242633" target="_blank">4square</a></span> or,<br/>Quentin undertakes a rollicking escapade</h2><p>"You've got 4 mayor's ships? You've never even been on a ship, never mind seven. Christ, Quentin, you can't even swim. Oh. Wait. What? <strong><a href="https://foursquare.com/user/1242633" target="_blank">4 square</a></strong>s? Of what? Dammit. Forget this. I don't even care about whatever it is you're sayin'."
+		</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="footer">
+			<div id="email"><p>karen@sheisking.com</div>
+			<div id="if"><p>If you were me, all this would be yours</p></div>
+	</div>
+	</body>
+</html>

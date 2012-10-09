@@ -1,0 +1,196 @@
+/*
+ * CSS Styles that are used on the jScrollPane demo site - these are custom to the site and
+ * you shouldn't need to use them in your own implementations of jScrollPane.
+ */
+@font-face {
+    font-family: 'TheSerifSemiBoldPlain';
+    src: url('theserifsemibold-plain-webfont.eot');
+    src: url('theserifsemibold-plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('theserifsemibold-plain-webfont.woff') format('woff'),
+         url('theserifsemibold-plain-webfont.ttf') format('truetype'),
+         url('theserifsemibold-plain-webfont.svg#TheSerifSemiBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body
+{
+		background:#000;
+		width:100%;	
+	/*	overflow-x: hidden; */
+		overflow-y: auto;
+
+}
+
+#header{
+	height:20px;
+	width:100%;
+	background: url("http://laura.mighty.ca/images/topbg.jpg") repeat-x;
+	}
+
+
+
+#content{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	background:#f7f7f7;
+}
+
+#container
+{
+	background: #f7f7f7;
+	margin:80px 0 100px 0;
+	overflow:hidden;
+	width: 100%;
+
+}
+#right_col{
+	height:615px;
+	width:310px;
+	margin-top:64px;
+	border-right:1px solid #000;
+	float:left;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+#right_col img{
+	margin:58px 0 0 33px;
+}
+#right_col ul{
+	list-style-type:none;
+	margin-top:30px;
+	margin-left:20px;
+}
+
+#right_col li {
+	margin-bottom:15px;
+	font-family:'Arial Narrow', sans-serif;
+}
+h1
+{
+	font-family: 'Arial Narrow', sans-serif;
+	font-size:20px;
+	font-weight:normal;
+	display: inline-block;
+	text-transform:uppercase;
+}
+
+h2
+{
+	font-family: 'Arial Narrow', sans-serif;
+	font-size:20px;
+	font-weight:normal;
+	display: inline-block;
+	text-transform:uppercase;
+}
+
+h2 span.setting-type
+{
+	font-weight: normal;
+}
+
+p
+{
+	font-family:Arial;
+	font-size:14px;
+	line-height:23px;
+	margin-top:38px;
+}
+
+#footer {
+	height:48px;
+	background:#000;
+	clear:left;
+	margin-top: -45px;
+}
+#footer p{
+	color:#fff;
+	float:left;
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 16px;
+	margin-top: 13px;
+}
+#footer #if {float:right;margin-right:30px;}
+#footer #email{float:left; margin-left:30px;}
+a
+{
+	color: #7171D4;
+	text-decoration: none;
+}
+#container .scroll-pane{
+	margin-top:29px;
+	width:100%!important;
+		overflow:hidden;
+}
+#container .scroll-pane #tumblr{
+	margin-left:50px;
+	
+}
+#container .scroll-pane #tumblr,
+#container .scroll-pane #company,
+#container .scroll-pane #tiny,
+#container .scroll-pane #twitter,
+#container .scroll-pane #posterous,
+#container .scroll-pane #work,
+#container .scroll-pane #linkedin,
+#container .scroll-pane #data,
+#container .scroll-pane #books,
+#container .scroll-pane #foursquare{
+	float:left;
+	width:343px;
+	margin-right: 50px;
+}
+
+#container .scroll-pane #linkedin p{
+	margin-top:38px;
+}
+#container .scroll-pane #posterous p{
+	margin-top:15px;
+}
+#container .scroll-pane #work p{
+	margin-top:61px;
+}
+#container .scroll-pane #data p,
+#container .scroll-pane #books p{
+	margin-top:62px;
+}
+#container .scroll-pane #foursquare p{
+margin-top:39px;
+}
+a{
+	color:#000000;
+}
+a:hover{
+	color:#81b816;
+}
+
+
+ul
+{
+	padding: 0 0 0 1em;
+}
+
+ul li
+{
+	margin: 0 0 .5em;
+}
+
+ul.link-list li
+{
+	margin: 0;
+}
+
+ul p
+{
+	margin: 0;
+}
+.item-list{overflow:hidden;width:4000px;}
