@@ -1,2 +1,1 @@
-sheisking
-=========
+Copy writing portfolio for friend, lives at sheisking.com
